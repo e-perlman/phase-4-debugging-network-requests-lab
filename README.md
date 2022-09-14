@@ -63,11 +63,21 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+    exception was not raised on create method, need create!
+
+    NameError (uninitialized constant ToysController::Toys):
+
+    Need to create Toy not Toys
 
 - Update the number of likes for a toy
 
   - How I debugged:
+  exception was not raised on update method, need update!
+
+  in byebug Unpermitted parameter: :id
+  toy_params only contains like, just need to updates like on toy not the whole toy object
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+   Destroy route was not included with the routes
